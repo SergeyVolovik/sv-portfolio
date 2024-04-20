@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #144448;
+    --secondary-color: #339fb5;
+    --white-color: #ffffff;
+
+    --bg-primary: var(--primary-color);
+    --bg-secondary: var(--secondary-color);
+    --bg-white: var(--white-color);
+
+    --primary-gradient: linear-gradient(
+      300deg,
+      var(--bg-primary) 0%,
+      var(--bg-secondary) 32%,
+      var(--bg-secondary) 73%,
+      var(--bg-primary) 100%
+    );
+    --secondary-gradient: linear-gradient(
+      300deg,
+      var(--bg-primary) 0%,
+      var(--bg-white) 22%,
+      var(--bg-white) 74%,
+      var(--bg-primary) 100%
+    );
+  }
+
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+  }
+
+  .dark {
+    background: var(--primary-gradient);
+  }
+
+  .light {
+    background: var(--secondary-gradient);
+  }
+
+  .root {
+    width: inherit;
+    height: inherit;
+  }
+}

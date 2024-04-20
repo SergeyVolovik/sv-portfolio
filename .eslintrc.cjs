@@ -1,0 +1,74 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
+    'prettier'
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    warnOnUnsupportedTypeScriptVersion: false
+  },
+  plugins: [
+    'react-refresh',
+    'react-hooks',
+    '@typescript-eslint',
+    'unused-imports',
+    'prettier'
+  ],
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true }
+    ],
+    'react/display-name': 'off',
+    quotes: [2, 'single', 'avoid-escape'],
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        destructuredArrayIgnorePattern: '^_'
+      }
+    ],
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_'
+      }
+    ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto'
+      }
+    ],
+    'no-duplicate-imports': 'error',
+    camelcase: 'error',
+    'unused-imports/no-unused-imports': 'error',
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off'
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true
+      }
+    },
+    react: {
+      version: 'detect'
+    }
+  }
+};
