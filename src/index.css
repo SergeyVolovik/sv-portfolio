@@ -7,6 +7,7 @@
     --primary-color: #144448;
     --secondary-color: #339fb5;
     --white-color: #ffffff;
+    --neon-color: #3fffff;
 
     --bg-primary: var(--primary-color);
     --bg-secondary: var(--secondary-color);
@@ -48,7 +49,14 @@
   }
 
   .root {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .icon-action {
+    @apply p-[13px] flex items-center justify-center bg-white rounded-2xl hover:bg-neon;
   }
 }

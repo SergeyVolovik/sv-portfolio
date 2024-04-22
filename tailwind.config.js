@@ -7,7 +7,8 @@ const extendedTailwindcssTheme = {
   extend: {
     colors: {
       primary: 'var(--primary-color)',
-      secondary: 'var(--secondary-color)'
+      secondary: 'var(--secondary-color)',
+      neon: 'var(--neon-color)'
     }
   }
 };
