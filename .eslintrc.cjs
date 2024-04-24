@@ -22,6 +22,7 @@ module.exports = {
     'react-hooks',
     '@typescript-eslint',
     'unused-imports',
+    'trim',
     'prettier'
   ],
   rules: {
@@ -59,7 +60,9 @@ module.exports = {
     camelcase: 'error',
     'unused-imports/no-unused-imports': 'error',
     'react/jsx-uses-react': 'off',
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 'off',
+    'trim/argument': 'error',
+    'trim/class-name': 'error'
   },
   settings: {
     'import/resolver': {
