@@ -4,7 +4,7 @@ import { Button } from '@/components';
 export const Home = () => (
   <section className="w-full h-full pt-[128px] px-28 relative">
     <BackgroundIcons />
-    <div className=" flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center">
       <h1>
         <span>Hi, I`m</span> <span>Serhii Volovik</span>
         <br />
