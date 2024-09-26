@@ -2,13 +2,19 @@ import { BackgroundIcons, ContactIcon, DownloadIcon } from '@/assets';
 import { Button } from '@/components';
 
 export const Home = () => (
-  <section className="w-full h-full pt-[128px] px-28 relative">
+  <section id="#home" className="w-full h-full pt-[128px] px-28 relative">
     <BackgroundIcons />
-    <div className="flex flex-col items-center justify-center">
-      <h1>
-        <span>Hi, I`m</span> <span>Serhii Volovik</span>
+    <div className="flex flex-col items-center justify-center gap-[64px]">
+      <h1 className="w-full max-w-[753px] text-[52px] font-bold">
+        <span>
+          <span>Hi, I`m</span>{' '}
+          <span className="text-primary">Serhii Volovik</span>
+        </span>
         <br />
-        <span>I’m</span> <span>Front End Developer</span>
+        <div className="text-right">
+          <span className="text-primary">I’m</span>{' '}
+          <span>Front End Developer</span>
+        </div>
       </h1>
       <div className="flex items-center gap-8">
         <div className="flex flex-col items-center justify-center gap-[14px]">
