@@ -1,10 +1,8 @@
 import { ReactChildren } from '@/interfaces';
 
-interface WrapperProps extends ReactChildren {}
-
-export const Wrapper = ({ children }: WrapperProps) => {
+export const Wrapper = ({ children }: ReactChildren) => {
   return (
-    <section className="w-full h-full max-w-[1598px] m-auto px-4 py-[36px] relative z-0">
+    <section className="w-full max-w-[590px] mx-auto px-4 pt-[100px] pb-[36px] flex flex-col items-center justify-center gap-4">
       {children}
     </section>
   );

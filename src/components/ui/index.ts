@@ -1,1 +1,1 @@
-export { Logo } from './Logo';
+export { Panel } from './Panel';

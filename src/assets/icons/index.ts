@@ -1,5 +1,5 @@
-export { BackgroundIcons } from './BackgroundIcons';
 export { ContactIcon } from './ContactIcon';
+export { CopyEmailIcon } from './CopyEmailIcon';
 export { DarkIcon } from './DarkIcon';
 export { DownloadIcon } from './DownloadIcon';
 export { GitHubIcon } from './GitHubIcon';
@@ -7,6 +7,6 @@ export { HomeIcon } from './HomeIcon';
 export { InstagramIcon } from './InstagramIcon';
 export { LightIcon } from './LightIcon';
 export { LinkedInIcon } from './LinkedInIcon';
-export { LogoIcon } from './LogoIcon';
 export { PortfolioIcon } from './PortfolioIcon';
 export { ProfileIcon } from './ProfileIcon';
+export { TelegramIcon } from './TelegramIcon';

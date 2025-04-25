@@ -1,24 +1,19 @@
-import { ContactIcon, HomeIcon, PortfolioIcon, ProfileIcon } from '@/assets';
+import { HomeIcon, PortfolioIcon, ProfileIcon } from '@/assets';
 
 export const NAVIGATION_LINKS_CONFIG = [
   {
     title: 'Home',
     icon: <HomeIcon />,
-    to: '#home'
+    to: '/'
   },
   {
     title: 'About Me',
     icon: <ProfileIcon />,
-    to: '#about'
+    to: '/aboutme'
   },
   {
     title: 'Projects',
     icon: <PortfolioIcon />,
-    to: '#projects'
-  },
-  {
-    title: 'Contact',
-    icon: <ContactIcon />,
-    to: '#contact'
+    to: '/projects'
   }
 ];

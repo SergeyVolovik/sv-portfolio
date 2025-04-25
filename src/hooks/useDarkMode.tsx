@@ -1,28 +1,41 @@
 import { DarkIcon, LightIcon } from '@/assets';
-import { useEffect, useState } from 'react';
-
-const DARK_MODE = 'darkMode';
+import { MODE } from '@/constants';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 export const useDarkMode = () => {
-  const mode = localStorage.getItem(DARK_MODE) === 'true';
+  const prefersLight = window.matchMedia(
+    '(prefers-color-scheme: light)'
+  ).matches;
+  const mode = localStorage.getItem(MODE.DARK_MODE) === 'true' || prefersLight;
   const [isDarkMode, setIsDarkMode] = useState(mode);
   const iconByMode = isDarkMode ? <LightIcon /> : <DarkIcon />;
+  const modeText = isDarkMode ? MODE.TEXT.LIGHT : MODE.TEXT.DARK;
+  const bodyClassList = document.body.classList;
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const toggleDarkModeBody = () => {
-      document.body.classList.toggle('dark', isDarkMode);
-      document.body.classList.toggle('light', !isDarkMode);
+      bodyClassList.toggle(MODE.TEXT.DARK, isDarkMode);
+      bodyClassList.toggle(MODE.TEXT.LIGHT, !isDarkMode);
     };
 
     toggleDarkModeBody();
-    localStorage.setItem(DARK_MODE, `${isDarkMode}`);
+    localStorage.setItem(MODE.DARK_MODE, `${isDarkMode}`);
   }, [isDarkMode]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      bodyClassList.add('transition-colors', 'duration-200');
+    }, 50);
+
+    return () => clearTimeout(timeout);
+  }, []);
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 
   return {
     isDarkMode,
     iconByMode,
-    toggleDarkMode
+    toggleDarkMode,
+    modeText
   };
 };
