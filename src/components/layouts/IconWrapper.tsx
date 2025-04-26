@@ -1,11 +1,7 @@
-import { ReactChildren } from '@/interfaces';
-
-interface IconWrapperProps extends ReactChildren {
-  className?: string;
-}
+import { IconWrapperProps } from '@/interfaces';
 
 export const IconWrapper = ({ className, children }: IconWrapperProps) => (
-  <div className={`w-fit p-4 bg-primary rounded-2xl ${className}`}>
+  <div className={`w-fit flex gap-2 flex-wrap md:gap-4 ${className || ''}`}>
     {children}
   </div>
 );

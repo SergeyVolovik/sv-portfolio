@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --black: #161616;
+    --white: #ffffff;
+    --gray: #f1f1f1;
+    --dark-gray: #666666;
+    --light-gray: #cccccc;
+    --blackRgba7: rgba(22, 22, 22, 0.07);
+    --blackRgba10: rgba(22, 22, 22, 0.1);
+    --blackRgba20: rgba(22, 22, 22, 0.2);
+    --blackRgba50: rgba(22, 22, 22, 0.5);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 18px;
+  }
+
+  .dark {
+    background: var(--black);
+  }
+
+  .light {
+    background: var(--gray);
+  }
+
+  .root {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .transition__effect {
+    @apply transition-all duration-200 ease-linear;
+  }
+  .hover__effect {
+    @apply hover:shadow-[0px_0px_0px_3px_rgba(22,22,22,0.07)];
+  }
+  .active__effect {
+    @apply active:bg-blackRgba50 active:shadow-none;
+  }
+
+  .default__link {
+    @apply flex items-center gap-1 relative;
+  }
+  .active__link {
+    @apply p-[5px] before:transition__effect before:w-[35px] before:h-[35px] before:block before:opacity-0 before:absolute before:left-1/2 before:-translate-x-1/2 before:bg-blackRgba7 before:rounded-full hover:before:opacity-100;
+  }
+}

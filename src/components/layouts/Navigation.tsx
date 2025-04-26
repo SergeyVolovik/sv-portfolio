@@ -1,11 +1,7 @@
 import { ReactChildren } from '@/interfaces';
 
-interface NavigationProps extends ReactChildren {}
-
-export const Navigation = ({
-  children
-}: NavigationProps): React.ReactElement => (
-  <nav className="navbar navbar-sticky max-w-[730px] px-[49px] py-[25px] justify-between top-[38px] left-1/2 -translate-x-1/2 bg-primary rounded-2xl">
+export const Navigation = ({ children }: ReactChildren) => (
+  <nav className="navbar navbar-sticky w-full max-w-[590px] p-0 px-[15px] justify-between bg-transparent gap-4 top-[20px] left-1/2 -translate-x-1/2 rounded-md border-none shadow-none">
     {children}
   </nav>
 );
