@@ -1,6 +1,9 @@
-import { Footer } from '@/components';
 import { STATUS } from '@/constants';
-import { CurrentStatus, SectionWithName } from '@/features';
+import {
+  CurrentStatus,
+  SectionWithName,
+  WorkTogetherSection
+} from '@/features';
 
 export const Home = () => (
   <>
@@ -10,6 +13,6 @@ export const Home = () => (
     >
       <CurrentStatus status={STATUS.AVAILABLE} />
     </SectionWithName>
-    <Footer />
+    <WorkTogetherSection />
   </>
 );

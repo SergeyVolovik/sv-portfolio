@@ -1,5 +1,12 @@
 import { ContactIcon } from '@/assets';
-import { Button, Header, Navigation, Panel, Wrapper } from '@/components';
+import {
+  Button,
+  Footer,
+  Header,
+  Navigation,
+  Panel,
+  Wrapper
+} from '@/components';
 import { BUTTONS_CONFIG } from '@/configs/Buttons.config';
 import { NavigationLinks, ThemeSwitchButton } from '@/features';
 import { Outlet } from 'react-router-dom';
@@ -23,6 +30,7 @@ export const App = () => (
     <Wrapper>
       <Panel className="p-2 flex flex-col items-center gap-4">
         <Outlet />
+        <Footer />
       </Panel>
     </Wrapper>
   </>

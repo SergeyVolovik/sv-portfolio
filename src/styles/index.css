@@ -42,7 +42,7 @@
   }
 
   .transition__effect {
-    @apply transition-all duration-200 ease-linear;
+    @apply transition-all duration-300 ease-linear;
   }
   .hover__effect {
     @apply hover:shadow-[0px_0px_0px_3px_rgba(22,22,22,0.07)];
@@ -50,11 +50,45 @@
   .active__effect {
     @apply active:bg-blackRgba50 active:shadow-none;
   }
-
-  .default__link {
-    @apply flex items-center gap-1 relative;
+  .fill__icon__effect {
+    @apply transition__effect fill-darkGray;
   }
-  .active__link {
-    @apply p-[5px] before:transition__effect before:w-[35px] before:h-[35px] before:block before:opacity-0 before:absolute before:left-1/2 before:-translate-x-1/2 before:bg-blackRgba7 before:rounded-full hover:before:opacity-100;
+  .stroke__icon__effect {
+    @apply transition__effect stroke-darkGray;
+  }
+
+  .default__navlink {
+    @apply p-[5px] flex items-center gap-1 relative;
+  }
+
+  .active__navlink .fill__icon__effect {
+    @apply fill-black;
+  }
+  .active__navlink .stroke__icon__effect {
+    @apply stroke-black;
+  }
+  .default__navlink:hover .fill__icon__effect,
+  .theme__switcher:hover .fill__icon__effect {
+    @apply fill-black;
+  }
+  .default__navlink:hover .stroke__icon__effect,
+  .theme__switcher:hover .stroke__icon__effect {
+    @apply stroke-black;
+  }
+
+  @keyframes shine {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.2);
+    }
+  }
+
+  .shine__animation {
+    @apply animate-[shine_1.2s_infinite_ease-in-out];
   }
 }
