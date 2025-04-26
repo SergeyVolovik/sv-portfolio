@@ -7,7 +7,7 @@ export const useCircleNavLinkAnimation = () => {
   const circleRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<Record<string, HTMLAnchorElement | null>>({});
   const [hovered, setHovered] = useState<string | null>(null);
-  const activeLink = linksRef.current[location.pathname];
+  const activeLinkClassName = 'active__navlink';
 
   const moveCircleTo = (path: string) => {
     const link = linksRef.current[path];
@@ -18,8 +18,14 @@ export const useCircleNavLinkAnimation = () => {
       const linkRect = link.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
       const centerX = linkRect.left - containerRect.left + linkRect.width / 2;
+      const activeLink = linksRef.current[location.pathname];
 
-      activeLink?.classList.toggle('active__navlink');
+      if (activeLink !== link) {
+        activeLink?.classList.remove(activeLinkClassName);
+      } else {
+        activeLink?.classList.add(activeLinkClassName);
+      }
+
       circle.style.left = `${centerX}px`;
     }
   };
