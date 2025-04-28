@@ -1,4 +1,4 @@
-import { STATUS } from '@/constants';
+import { COMMON_CONSTANTS } from '@/constants';
 import {
   CurrentStatus,
   SectionWithName,
@@ -11,7 +11,7 @@ export const Home = () => (
       className="py-6 flex-row items-center bg-white justify-between text-darkGray"
       sectionName="Software Engineer"
     >
-      <CurrentStatus status={STATUS.AVAILABLE} />
+      <CurrentStatus status={COMMON_CONSTANTS.WORK_STATUS.AVAILABLE} />
     </SectionWithName>
     <WorkTogetherSection />
   </>

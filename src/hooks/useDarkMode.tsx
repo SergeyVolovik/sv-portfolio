@@ -1,7 +1,8 @@
 import { DarkIcon, LightIcon } from '@/assets';
-import { MODE } from '@/constants';
+import { COMMON_CONSTANTS } from '@/constants';
 import { useEffect, useLayoutEffect, useState } from 'react';
 
+const { MODE } = COMMON_CONSTANTS;
 export const useDarkMode = () => {
   const prefersLight = window.matchMedia(
     '(prefers-color-scheme: light)'
@@ -28,7 +29,7 @@ export const useDarkMode = () => {
     }, 50);
 
     return () => clearTimeout(timeout);
-  }, []);
+  });
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
 

@@ -1,3 +1,5 @@
+export { CopyEmailButton, HireButton } from './controllers';
+
 export { ButtonGroup } from './ButtonGroup';
 export { CurrentStatus } from './CurrentStatus';
 export { NavigationLinks } from './NavigationLinks';
