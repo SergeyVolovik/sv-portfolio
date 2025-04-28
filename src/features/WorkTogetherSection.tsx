@@ -1,5 +1,4 @@
-import { ButtonGroup } from '@/features/ButtonGroup';
-import { SectionWithName } from '@/features/SectionWithName';
+import { ButtonGroup, SectionWithName } from '@/features';
 
 export const WorkTogetherSection = () => (
   <SectionWithName className="mb-10 flex-col bg-white justify-center items-center gap-5 text-center">

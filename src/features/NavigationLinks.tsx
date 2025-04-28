@@ -16,6 +16,7 @@ export const NavigationLinks = () => {
         ref={circleRef}
         className="link__circle w-[35px] h-[35px] bg-blackRgba7 absolute -translate-x-1/2 translate-y-[-0.5px] rounded-full transition__effect pointer-events-none"
       ></div>
+
       {PROJECT_CONFIG.NAVIGATION_LINKS_CONFIG.map(({ title, icon, to }) => (
         <Tooltip text={title} key={title}>
           <NavLink
@@ -27,6 +28,7 @@ export const NavigationLinks = () => {
               'default__navlink transition__effect' +
               (isActive ? ' active__navlink' : '')
             }
+            end
             onMouseEnter={() => setHovered(to)}
             onMouseLeave={() => setHovered(null)}
           >

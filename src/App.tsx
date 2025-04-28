@@ -1,14 +1,5 @@
-import { ContactIcon } from '@/assets';
-import {
-  Button,
-  Footer,
-  Header,
-  Navigation,
-  Panel,
-  Wrapper
-} from '@/components';
-import { BUTTONS_CONFIG } from '@/configs/Buttons.config';
-import { NavigationLinks, ThemeSwitchButton } from '@/features';
+import { Footer, Header, Navigation, Panel, Wrapper } from '@/components';
+import { HireButton, NavigationLinks, ThemeSwitchButton } from '@/features';
 import { Outlet } from 'react-router-dom';
 
 export const App = () => (
@@ -19,10 +10,7 @@ export const App = () => (
           <NavigationLinks />
           <div className="flex items-center gap-4 flex-wrap">
             <ThemeSwitchButton />
-            <Button onClick={() => {}}>
-              <ContactIcon />
-              <span>{BUTTONS_CONFIG.HIRE}</span>
-            </Button>
+            <HireButton />
           </div>
         </Panel>
       </Navigation>
