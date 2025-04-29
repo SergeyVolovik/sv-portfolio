@@ -48,7 +48,7 @@
     @apply hover:shadow-[0px_0px_0px_3px_rgba(22,22,22,0.07)];
   }
   .active__effect {
-    @apply active:bg-blackRgba50 active:shadow-none;
+    @apply active:opacity-60 active:bg-blackRgba50 active:shadow-none;
   }
   .fill__icon__effect {
     @apply transition__effect fill-darkGray;

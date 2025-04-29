@@ -1,9 +1,12 @@
-export { CopyEmailButton, HireButton } from './controllers';
+export { CopyEmailButton, HireButton, ThemeSwitchButton } from './controllers';
 
 export { ButtonGroup } from './ButtonGroup';
 export { CurrentStatus } from './CurrentStatus';
 export { NavigationLinks } from './NavigationLinks';
-export { SectionWithName } from './SectionWithName';
 export { SocialLinks } from './SocialLinks';
-export { ThemeSwitchButton } from './ThemeSwitchButton';
-export { WorkTogetherSection } from './WorkTogetherSection';
+
+export {
+  ProjectsSection,
+  SectionWithName,
+  WorkTogetherSection
+} from './layouts';
