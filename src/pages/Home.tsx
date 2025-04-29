@@ -4,6 +4,7 @@ import {
   SectionWithName,
   WorkTogetherSection
 } from '@/features';
+import { ProjectsSection } from '@/features/layouts';
 
 export const Home = () => (
   <>
@@ -13,6 +14,7 @@ export const Home = () => (
     >
       <CurrentStatus status={COMMON_CONSTANTS.WORK_STATUS.AVAILABLE} />
     </SectionWithName>
+    <ProjectsSection />
     <WorkTogetherSection />
   </>
 );
