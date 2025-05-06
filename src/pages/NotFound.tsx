@@ -1,12 +1,12 @@
-import { SectionWithName } from '@/features';
+import { SectionWithTitle } from '@/features';
 
 export const NotFound = () => {
   return (
-    <SectionWithName
+    <SectionWithTitle
       className="flex-col bg-white"
-      sectionName="Oops! Page not found"
+      sectionTitle="Oops! Page not found"
     >
       <div className="text-darkGray">404</div>
-    </SectionWithName>
+    </SectionWithTitle>
   );
 };

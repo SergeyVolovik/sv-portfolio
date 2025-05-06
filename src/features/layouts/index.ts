@@ -1,3 +1,3 @@
 export { ProjectsSection } from './ProjectsSection';
-export { SectionWithName } from './SectionWithName';
+export { SectionWithTitle } from './SectionWithTitle';
 export { WorkTogetherSection } from './WorkTogetherSection';

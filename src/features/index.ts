@@ -7,6 +7,6 @@ export { SocialLinks } from './SocialLinks';
 
 export {
   ProjectsSection,
-  SectionWithName,
+  SectionWithTitle,
   WorkTogetherSection
 } from './layouts';

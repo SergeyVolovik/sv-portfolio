@@ -1,20 +1,15 @@
 import { COMMON_CONSTANTS } from '@/constants';
-import {
-  CurrentStatus,
-  SectionWithName,
-  WorkTogetherSection
-} from '@/features';
+import { CurrentStatus, SectionWithTitle } from '@/features';
 import { ProjectsSection } from '@/features/layouts';
 
 export const Home = () => (
   <>
-    <SectionWithName
+    <SectionWithTitle
       className="py-6 flex-row items-center bg-white justify-between text-darkGray"
-      sectionName="Software Engineer"
+      sectionTitle="Software Engineer"
     >
       <CurrentStatus status={COMMON_CONSTANTS.WORK_STATUS.AVAILABLE} />
-    </SectionWithName>
+    </SectionWithTitle>
     <ProjectsSection />
-    <WorkTogetherSection />
   </>
 );

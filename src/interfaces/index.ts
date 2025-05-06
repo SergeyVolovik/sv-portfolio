@@ -1,23 +1,21 @@
-export interface ReactChildren {
+export interface ReactComponent {
   children: React.ReactNode;
+  className?: string;
 }
 
-export interface TooltipProps extends ReactChildren {
+export interface TooltipProps extends ReactComponent {
   text: string;
 }
 
-export interface ButtonProps extends ReactChildren {
-  className?: string;
+export interface ButtonProps extends ReactComponent {
   onClick: () => void;
 }
 
-export interface IconWrapperProps extends ReactChildren {
-  className?: string;
+export interface IconWrapperProps extends ReactComponent {}
+export interface PanelProps extends ReactComponent {}
+export interface SectionWithTitleProps extends ReactComponent {
+  sectionTitle?: string;
 }
-export interface PanelProps extends ReactChildren {
-  className?: string;
-}
-export interface SectionWithNameProps extends ReactChildren {
-  sectionName?: string;
-  className?: string;
-}
+
+export interface SectionTitleProps extends ReactComponent {}
+export interface ParagraphProps extends ReactComponent {}
