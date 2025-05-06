@@ -1,5 +1,5 @@
-import { ReactChildren } from '@/interfaces';
+import { ReactComponent } from '@/interfaces';
 
-export const Header = ({ children }: ReactChildren) => {
+export const Header = ({ children }: ReactComponent) => {
   return <header className="w-full">{children}</header>;
 };

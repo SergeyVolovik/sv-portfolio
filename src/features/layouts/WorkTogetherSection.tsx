@@ -1,11 +1,12 @@
-import { ButtonGroup, SectionWithName } from '@/features';
+import { Paragraph, Title } from '@/components';
+import { ButtonGroup, SectionWithTitle } from '@/features';
 
 export const WorkTogetherSection = () => (
-  <SectionWithName className="my-10 flex-col bg-white justify-center items-center gap-5 text-center">
-    <h1 className="text-3xl font-bold text-black">Let’s work together</h1>
-    <p className="text-darkGray">
+  <SectionWithTitle className="my-10 flex-col bg-white justify-center items-center gap-5 text-center">
+    <Title>Let’s work together</Title>
+    <Paragraph>
       Creating user experience and visual appealing applications
-    </p>
+    </Paragraph>
     <ButtonGroup />
-  </SectionWithName>
+  </SectionWithTitle>
 );

@@ -1,7 +1,7 @@
-import { SectionWithName } from '@/features/layouts/SectionWithName';
+import { SectionWithTitle } from '@/features/layouts/SectionWithTitle';
 
 export const ProjectsSection = () => (
-  <SectionWithName sectionName="Projects" className="py-6 justify-between">
+  <SectionWithTitle sectionTitle="Projects" className="py-6 justify-between">
     {null}
-  </SectionWithName>
+  </SectionWithTitle>
 );
