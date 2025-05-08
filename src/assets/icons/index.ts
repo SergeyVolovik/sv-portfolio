@@ -1,3 +1,4 @@
+export { ArrowRightIcon } from './ArrowRightIcon';
 export { ContactIcon } from './ContactIcon';
 export { CopyEmailIcon } from './CopyEmailIcon';
 export { DarkIcon } from './DarkIcon';
