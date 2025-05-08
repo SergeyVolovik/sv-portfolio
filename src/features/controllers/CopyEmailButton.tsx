@@ -7,7 +7,7 @@ export const CopyEmailButton = () => {
 
   return (
     <Button
-      className="bg-white border border-blackRgba7"
+      className="bg-white border border-blackRgba10"
       onClick={handleCopyEmail}
     >
       <CopyEmailIcon />
