@@ -7,6 +7,9 @@ export interface TooltipProps extends ReactComponent {
   text: string;
 }
 
+export interface NavLinkButtonProps extends ReactComponent {
+  linkTo: string;
+}
 export interface ButtonProps extends ReactComponent {
   onClick: () => void;
 }
@@ -19,3 +22,7 @@ export interface SectionWithTitleProps extends ReactComponent {
 
 export interface SectionTitleProps extends ReactComponent {}
 export interface ParagraphProps extends ReactComponent {}
+export interface ButtonGroupProps extends ReactComponent {}
+export interface IconProps {
+  className?: string;
+}

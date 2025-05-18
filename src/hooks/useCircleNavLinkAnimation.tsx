@@ -1,4 +1,4 @@
-import { NAVIGATION_LINKS_CONFIG } from '@/configs/NavigationLinks.config';
+import { NAVIGATION_LINKS_CONFIG } from '@/configs';
 import { useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 

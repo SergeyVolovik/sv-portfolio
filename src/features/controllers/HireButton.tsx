@@ -1,15 +1,11 @@
 import { ContactIcon } from '@/assets';
-import { Button } from '@/components';
-import { BUTTONS_CONFIG } from '@/configs/Buttons.config';
-import { useNavigate } from 'react-router-dom';
+import { BUTTONS_CONFIG, NAVIGATION_PATHS } from '@/configs';
 
-export const HireButton = () => {
-  const navigate = useNavigate();
+import { NavLinkButton } from './NavLinkButton';
 
-  return (
-    <Button onClick={() => navigate('/contact')}>
-      <ContactIcon />
-      <span>{BUTTONS_CONFIG.HIRE}</span>
-    </Button>
-  );
-};
+export const HireButton = () => (
+  <NavLinkButton linkTo={NAVIGATION_PATHS.CONTACT}>
+    <ContactIcon />
+    <span>{BUTTONS_CONFIG.HIRE}</span>
+  </NavLinkButton>
+);

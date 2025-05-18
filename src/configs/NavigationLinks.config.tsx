@@ -1,47 +1,56 @@
 import { HomeIcon, PortfolioIcon, ProfileIcon } from '@/assets';
 import { AboutMe, Contact, Home, NotFound, Project, Projects } from '@/pages';
 
+export const NAVIGATION_PATHS = {
+  HOME: '/',
+  ABOUT_ME: '/aboutme',
+  PROJECTS: '/projects',
+  PROJECT: '/projects/:id',
+  CONTACT: '/contact',
+  NOT_FOUND: '*'
+};
+
 export const NAVIGATION_LINKS_CONFIG = [
   {
     title: 'Home',
     icon: <HomeIcon />,
-    to: '/'
+    to: NAVIGATION_PATHS.HOME
   },
   {
     title: 'About Me',
     icon: <ProfileIcon />,
-    to: '/aboutme'
+    to: NAVIGATION_PATHS.ABOUT_ME
   },
   {
     title: 'Projects',
     icon: <PortfolioIcon />,
-    to: '/projects'
+    to: NAVIGATION_PATHS.PROJECTS
   }
 ];
 
 export const NAVIGATION_CHILDREN_CONFIG = [
   {
-    path: '/',
+    path: NAVIGATION_PATHS.HOME,
     element: <Home />
   },
   {
-    path: '/aboutme',
+    path: NAVIGATION_PATHS.ABOUT_ME,
     element: <AboutMe />
   },
   {
-    path: '/projects',
+    path: NAVIGATION_PATHS.PROJECTS,
     element: <Projects />
   },
   {
-    path: '/projects/:id',
+    path: NAVIGATION_PATHS.PROJECT,
     element: <Project />
   },
   {
-    path: '/contact',
+    path: NAVIGATION_PATHS.CONTACT,
     element: <Contact />
   },
   {
-    path: '*',
+    path: NAVIGATION_PATHS.NOT_FOUND,
     element: <NotFound />
   }
 ];

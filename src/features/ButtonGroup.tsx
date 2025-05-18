@@ -1,8 +1,5 @@
-import { CopyEmailButton, HireButton } from './controllers';
+import { ButtonGroupProps } from '@/interfaces';
 
-export const ButtonGroup = ({ className }: { className?: string }) => (
-  <div className={`flex items-center gap-2 ${className || ''}`}>
-    <HireButton />
-    <CopyEmailButton />
-  </div>
+export const ButtonGroup = ({ className, children }: ButtonGroupProps) => (
+  <div className={`flex items-center gap-2 ${className || ''}`}>{children}</div>
 );

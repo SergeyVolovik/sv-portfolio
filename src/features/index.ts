@@ -1,4 +1,11 @@
-export { CopyEmailButton, HireButton, ThemeSwitchButton } from './controllers';
+export {
+  BackHomeButton,
+  CopyEmailButton,
+  HireButton,
+  NavLinkButton,
+  ThemeSwitchButton,
+  ViewAllButton
+} from './controllers';
 
 export { ButtonGroup } from './ButtonGroup';
 export { CurrentStatus } from './CurrentStatus';
