@@ -1,5 +1,10 @@
 import { Paragraph, Title } from '@/components';
-import { ButtonGroup, SectionWithTitle } from '@/features';
+import {
+  ButtonGroup,
+  CopyEmailButton,
+  HireButton,
+  SectionWithTitle
+} from '@/features';
 
 export const WorkTogetherSection = () => (
   <SectionWithTitle className="my-10 flex-col bg-white justify-center items-center gap-5 text-center">
@@ -7,6 +12,9 @@ export const WorkTogetherSection = () => (
     <Paragraph>
       Creating user experience and visual appealing applications
     </Paragraph>
-    <ButtonGroup />
+    <ButtonGroup>
+      <HireButton />
+      <CopyEmailButton />
+    </ButtonGroup>
   </SectionWithTitle>
 );

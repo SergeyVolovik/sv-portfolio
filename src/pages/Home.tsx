@@ -1,6 +1,5 @@
 import { COMMON_CONSTANTS } from '@/constants';
-import { CurrentStatus, SectionWithTitle } from '@/features';
-import { ProjectsSection } from '@/features/layouts';
+import { CurrentStatus, ProjectsSection, SectionWithTitle } from '@/features';
 
 export const Home = () => (
   <>

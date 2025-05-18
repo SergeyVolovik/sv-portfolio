@@ -1,4 +1,4 @@
-import { BUTTONS_CONFIG } from '@/configs/Buttons.config';
+import { BUTTONS_CONFIG } from '@/configs';
 import { COMMON_CONSTANTS } from '@/constants';
 import { useMemo, useState } from 'react';
 

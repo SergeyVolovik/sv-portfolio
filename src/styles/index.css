@@ -41,6 +41,10 @@
     overflow-y: auto;
   }
 
+  .fill__gray {
+    @apply fill-[var(--gray)];
+  }
+
   .transition__effect {
     @apply transition-all duration-300 ease-linear;
   }

@@ -1,5 +1,4 @@
-import { SectionWithTitle } from '@/features';
-import { ViewAllButton } from '@/features/controllers/ViewAllButton';
+import { SectionWithTitle, ViewAllButton } from '@/features';
 
 export const ProjectsSection = () => (
   <SectionWithTitle sectionTitle="Projects" className="py-6 justify-between">
