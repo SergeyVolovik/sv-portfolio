@@ -3,6 +3,7 @@ export {
   CopyEmailButton,
   HireButton,
   NavLinkButton,
+  ProjectBlockLink,
   ThemeSwitchButton,
   ViewAllButton
 } from './controllers';

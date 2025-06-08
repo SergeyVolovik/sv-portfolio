@@ -5,6 +5,10 @@ import rippleui from 'rippleui';
 
 const extendedTailwindcssTheme = {
   extend: {
+    screens: {
+      xxs: '320px',
+      xs: '375px'
+    },
     colors: {
       black: 'var(--black)',
       blackRgba7: 'var(--blackRgba7)',

@@ -5,7 +5,7 @@ import { NavLinkButton } from './NavLinkButton';
 
 export const ViewAllButton = () => (
   <NavLinkButton
-    className="bg-white border border-solid border-blackRgba10"
+    className="justify-self-end bg-white border border-solid border-blackRgba10"
     linkTo={NAVIGATION_PATHS.PROJECTS}
   >
     <span className="text-black">{BUTTONS_CONFIG.VIEW_ALL}</span>
