@@ -10,4 +10,5 @@ export { LightIcon } from './LightIcon';
 export { LinkedInIcon } from './LinkedInIcon';
 export { PortfolioIcon } from './PortfolioIcon';
 export { ProfileIcon } from './ProfileIcon';
+export { ProjectArrowRightIcon } from './ProjectArrowRightIcon';
 export { TelegramIcon } from './TelegramIcon';

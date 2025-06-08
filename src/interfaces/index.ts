@@ -26,3 +26,10 @@ export interface ButtonGroupProps extends ReactComponent {}
 export interface IconProps {
   className?: string;
 }
+
+export interface ProjectBlockLinkProps {
+  projectId: number;
+  imgSrc?: string;
+  title?: string;
+  description?: string;
+}
