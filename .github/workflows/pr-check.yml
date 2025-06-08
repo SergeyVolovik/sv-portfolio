@@ -9,6 +9,10 @@ on:
       - labeled
       - unlabeled
 
+permissions:
+  pull-requests: write
+  contents: read
+
 jobs:
   lint-and-build:
     runs-on: ubuntu-latest
