@@ -1,4 +1,5 @@
-name: CI
+name: Deploy to Vercel
+description: Deploys the application to Vercel after linting and building on main branch pushes or pull requests.
 
 on:
   pull_request:
