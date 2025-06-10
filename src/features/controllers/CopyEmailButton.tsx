@@ -11,7 +11,7 @@ export const CopyEmailButton = () => {
       onClick={handleCopyEmail}
     >
       <CopyEmailIcon />
-      <span className="w-full min-w-[81px] text-black">{buttonText}</span>
+      <span className="w-full min-w-[85px] text-black">{buttonText}</span>
     </Button>
   );
 };
