@@ -1,19 +1,21 @@
-import { NAVIGATION_PATHS } from '@/configs';
-import { PROJECTS } from '@/constants';
 import { ProjectBlockLink, SectionWithTitle, ViewAllButton } from '@/features';
-import { useLocation } from 'react-router-dom';
+import { useProjectsForShowing } from '@/hooks';
 
-export const ProjectsSection = () => {
-  const location = useLocation();
-  const isProjectsPage = location.pathname.includes(NAVIGATION_PATHS.PROJECTS);
+export const ProjectsSection = ({
+  sectionTitle = ''
+}: {
+  sectionTitle?: string;
+}) => {
+  const { projectForShowing, isProjectsPage } = useProjectsForShowing();
+  const title = isProjectsPage ? sectionTitle : sectionTitle || 'Projects';
 
   return (
     <SectionWithTitle
-      sectionTitle={isProjectsPage ? '' : 'Projects'}
+      sectionTitle={title}
       className={`py-6 grid grid-cols-2 grid-rows-[38px_auto] gap-4 items-center ${isProjectsPage ? '!flex flex-col items-stretch' : ''}`}
     >
       {isProjectsPage ? null : <ViewAllButton />}
-      {PROJECTS.map(({ id, imgSrc, title, description }) => (
+      {projectForShowing.map(({ id, imgSrc, title, description }) => (
         <ProjectBlockLink
           key={id}
           projectId={id}

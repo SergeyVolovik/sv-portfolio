@@ -1,2 +1,2 @@
 export { COMMON_CONSTANTS } from './common';
-export { PROJECTS } from './projects';
+export { MAX_PROJECTS_TO_SHOW, PROJECTS } from './projects';

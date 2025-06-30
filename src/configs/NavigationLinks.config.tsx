@@ -10,47 +10,59 @@ export const NAVIGATION_PATHS = {
   NOT_FOUND: '*'
 };
 
+const { HOME, ABOUT_ME, PROJECTS, PROJECT, CONTACT, NOT_FOUND } =
+  NAVIGATION_PATHS;
+
+export const NAVIGATION_PAGE_TITLES = {
+  [HOME]: 'SV Portfolio Website',
+  [ABOUT_ME]: 'About Me - SV Portfolio',
+  [PROJECTS]: 'Projects - SV Portfolio',
+  [PROJECT]: 'Project - SV Portfolio',
+  [CONTACT]: 'Contact - SV Portfolio',
+  [NOT_FOUND]: 'Not Found - SV Portfolio'
+};
+
 export const NAVIGATION_LINKS_CONFIG = [
   {
     title: 'Home',
     icon: <HomeIcon />,
-    to: NAVIGATION_PATHS.HOME
+    to: HOME
   },
   {
     title: 'About Me',
     icon: <ProfileIcon />,
-    to: NAVIGATION_PATHS.ABOUT_ME
+    to: ABOUT_ME
   },
   {
     title: 'Projects',
     icon: <PortfolioIcon />,
-    to: NAVIGATION_PATHS.PROJECTS
+    to: PROJECTS
   }
 ];
 
 export const NAVIGATION_CHILDREN_CONFIG = [
   {
-    path: NAVIGATION_PATHS.HOME,
+    path: HOME,
     element: <Home />
   },
   {
-    path: NAVIGATION_PATHS.ABOUT_ME,
+    path: ABOUT_ME,
     element: <AboutMe />
   },
   {
-    path: NAVIGATION_PATHS.PROJECTS,
+    path: PROJECTS,
     element: <Projects />
   },
   {
-    path: NAVIGATION_PATHS.PROJECT,
+    path: PROJECT,
     element: <Project />
   },
   {
-    path: NAVIGATION_PATHS.CONTACT,
+    path: CONTACT,
     element: <Contact />
   },
   {
-    path: NAVIGATION_PATHS.NOT_FOUND,
+    path: NOT_FOUND,
     element: <NotFound />
   }
 ];

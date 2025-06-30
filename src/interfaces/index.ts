@@ -33,3 +33,9 @@ export interface ProjectBlockLinkProps {
   title?: string;
   description?: string;
 }
+
+export interface AvatarProps {
+  imgSrc?: string;
+  children?: React.ReactNode;
+  className?: string;
+}

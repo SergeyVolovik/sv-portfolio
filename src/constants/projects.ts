@@ -24,3 +24,5 @@ export const PROJECTS = [
     imgSrc: 'https://avatars.githubusercontent.com/u/351?v=4'
   }
 ];
+
+export const MAX_PROJECTS_TO_SHOW = 3;
