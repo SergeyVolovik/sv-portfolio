@@ -33,3 +33,7 @@ export interface ProjectBlockLinkProps {
   title?: string;
   description?: string;
 }
+
+export interface AvatarProps extends ReactComponent {
+  imgSrc?: string;
+}

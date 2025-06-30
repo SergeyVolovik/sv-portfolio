@@ -6,9 +6,12 @@ import { NavLink } from 'react-router-dom';
 export const NavigationLinks = () => {
   const { containerRef, circleRef, linksRef, setHovered } =
     useCircleNavLinkAnimation();
-  const getClassName = ({ isActive }: { isActive: boolean }) =>
-    'default__navlink transition__effect' +
-    (isActive ? ' active__navlink' : '');
+  const getClassName = ({ isActive }: { isActive: boolean }) => {
+    return (
+      'default__navlink transition__effect' +
+      (isActive ? ' active__navlink' : '')
+    );
+  };
 
   return (
     <div
@@ -18,7 +21,7 @@ export const NavigationLinks = () => {
       <div
         ref={circleRef}
         className="link__circle w-[35px] h-[35px] bg-blackRgba7 absolute -translate-x-1/2 translate-y-[-0.5px] rounded-full transition__effect pointer-events-none"
-      ></div>
+      />
 
       {NAVIGATION_LINKS_CONFIG.map(({ title, icon, to }) => (
         <Tooltip text={title} key={title}>

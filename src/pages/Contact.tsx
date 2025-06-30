@@ -9,5 +9,6 @@ export const Contact = () => (
     >
       <CurrentStatus status={COMMON_CONSTANTS.WORK_STATUS.AVAILABLE} />
     </SectionWithTitle>
+    <h2 className="text-red-600">TBD Soon!</h2>
   </>
 );
