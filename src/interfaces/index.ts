@@ -34,6 +34,8 @@ export interface ProjectBlockLinkProps {
   description?: string;
 }
 
-export interface AvatarProps extends ReactComponent {
+export interface AvatarProps {
   imgSrc?: string;
+  children?: React.ReactNode;
+  className?: string;
 }
