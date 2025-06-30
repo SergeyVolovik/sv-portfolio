@@ -9,6 +9,8 @@ import {
   SectionWithTitle
 } from '@/features';
 
+const IMG_SRC = 'images/my-avatar.gif';
+
 export const Home = () => (
   <>
     <SectionWithTitle
@@ -31,7 +33,7 @@ export const Home = () => (
       </div>
       <Avatar
         className="order-1 md:order-2 w-full h-full p-2 max-w-[160px] max-h-[160px] bg-blackRgba10"
-        imgSrc="../src/assets/images/my-avatar.gif"
+        imgSrc={IMG_SRC}
       />
     </div>
     <ProjectsSection />
