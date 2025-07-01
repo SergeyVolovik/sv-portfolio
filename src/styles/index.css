@@ -21,8 +21,6 @@
 
   html,
   body {
-    width: 100vw;
-    height: 100vh;
     font-size: 18px;
   }
 
@@ -36,9 +34,7 @@
 
   .root {
     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    min-height: 100vh;
   }
 
   .fill__gray {

@@ -3,7 +3,7 @@ import { PROJECTS } from '@/constants';
 import { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
-export const useTitle = () => {
+export const usePageTitle = () => {
   const location = useLocation();
   const { id } = useParams();
   const projectTitle = id

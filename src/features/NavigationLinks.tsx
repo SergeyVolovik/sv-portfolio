@@ -29,11 +29,11 @@ export const NavigationLinks = () => {
             ref={(el) => {
               linksRef.current[to] = el;
             }}
-            to={to}
             className={getClassName}
-            end
+            to={to}
             onMouseEnter={() => setHovered(to)}
             onMouseLeave={() => setHovered(null)}
+            end
           >
             {icon}
           </NavLink>
