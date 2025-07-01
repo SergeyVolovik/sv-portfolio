@@ -3,5 +3,6 @@ export { useCopyEmail } from './useCopyEmail';
 export { useDarkMode } from './useDarkMode';
 export { useDeviceType } from './useDeviceType';
 export { usePage } from './usePage';
+export { usePageTitle } from './usePageTitle';
 export { useProjectsForShowing } from './useProjectsForShowing';
-export { useTitle } from './useTitle';
+export { useScrollToTop } from './useScrollToTop';

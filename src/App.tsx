@@ -1,10 +1,11 @@
 import { Footer, Header, Navigation, Panel, Wrapper } from '@/components';
 import { HireButton, NavigationLinks, ThemeSwitchButton } from '@/features';
-import { useTitle } from '@/hooks';
+import { usePageTitle, useScrollToTop } from '@/hooks';
 import { Outlet } from 'react-router-dom';
 
 export const App = () => {
-  useTitle();
+  usePageTitle();
+  useScrollToTop();
 
   return (
     <>
