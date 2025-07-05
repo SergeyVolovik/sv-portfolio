@@ -1,3 +1,4 @@
+export { FadeUpComponent } from './animation';
 export {
   BackHomeButton,
   CopyEmailButton,

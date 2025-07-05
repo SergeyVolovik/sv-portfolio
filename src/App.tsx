@@ -1,5 +1,10 @@
 import { Footer, Header, Navigation, Panel, Wrapper } from '@/components';
-import { HireButton, NavigationLinks, ThemeSwitchButton } from '@/features';
+import {
+  FadeUpComponent,
+  HireButton,
+  NavigationLinks,
+  ThemeSwitchButton
+} from '@/features';
 import { usePageTitle, useScrollToTop } from '@/hooks';
 import { Outlet } from 'react-router-dom';
 
@@ -20,12 +25,14 @@ export const App = () => {
           </Panel>
         </Navigation>
       </Header>
-      <Wrapper>
-        <Panel className="p-2 flex flex-col items-center gap-4">
-          <Outlet />
-          <Footer />
-        </Panel>
-      </Wrapper>
+      <FadeUpComponent>
+        <Wrapper>
+          <Panel className="p-2 flex flex-col items-center gap-4">
+            <Outlet />
+            <Footer />
+          </Panel>
+        </Wrapper>
+      </FadeUpComponent>
     </>
   );
 };

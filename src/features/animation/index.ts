@@ -1,0 +1,1 @@
+export { FadeUpComponent } from './FadeUpComponent';

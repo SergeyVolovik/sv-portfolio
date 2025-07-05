@@ -11,7 +11,7 @@ export const ProjectBlockLink = ({
   description
 }: ProjectBlockLinkProps) => (
   <NavLinkButton
-    className="!p-[20px] col-start-1 col-end-3 text-black text-left bg-white border border-solid border-blackRgba10 rounded-md"
+    className="group !p-[20px] col-start-1 col-end-3 text-black text-left bg-white border border-solid border-blackRgba10 rounded-md"
     linkTo={`${NAVIGATION_PATHS.PROJECTS}/${projectId}`}
   >
     <div className="w-full flex items-center gap-4">
@@ -24,6 +24,6 @@ export const ProjectBlockLink = ({
         <p className="text-darkGray">{description || 'Project description'}</p>
       </div>
     </div>
-    <ProjectArrowRightIcon />
+    <ProjectArrowRightIcon className="transition-all duration-300 transform group-hover:translate-x-[4px] group-hover:stroke-darkGray stroke-lightGray" />
   </NavLinkButton>
 );
