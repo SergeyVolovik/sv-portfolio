@@ -11,7 +11,6 @@ export const ProjectArrowRightIcon = ({ className }: IconProps) => (
   >
     <path
       d="M10 7L15 12L10 17"
-      stroke="#666666"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"

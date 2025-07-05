@@ -91,4 +91,18 @@
   .shine__animation {
     @apply animate-[shine_1.2s_infinite_ease-in-out];
   }
+
+  .fade-up {
+    opacity: 0.9;
+    transform: perspective(1000px) translateY(10px);
+    transition:
+      opacity 0.1s ease-out,
+      transform 0.1s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .fade-up.show {
+    opacity: 1;
+    transform: perspective(1000px) translateY(0);
+  }
 }
