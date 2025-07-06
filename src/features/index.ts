@@ -3,6 +3,7 @@ export {
   BackHomeButton,
   CopyEmailButton,
   HireButton,
+  HireMeForm,
   NavLinkButton,
   ProjectBlockLink,
   ThemeSwitchButton,

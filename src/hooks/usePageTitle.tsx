@@ -1,4 +1,4 @@
-import { NAVIGATION_PAGE_TITLES } from '@/configs';
+import { NAVIGATION_PAGE_TITLES, NAVIGATION_PATHS } from '@/configs';
 import { PROJECTS } from '@/constants';
 import { useEffect } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
@@ -17,4 +17,8 @@ export const usePageTitle = () => {
       NAVIGATION_PAGE_TITLES[location.pathname] ||
       NAVIGATION_PAGE_TITLES['/'];
   }, [location]);
+
+  return {
+    isContactPage: location.pathname === NAVIGATION_PATHS.CONTACT
+  };
 };

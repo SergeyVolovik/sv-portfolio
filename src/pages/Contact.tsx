@@ -1,5 +1,6 @@
+import { Paragraph, Title } from '@/components';
 import { COMMON_CONSTANTS } from '@/constants';
-import { CurrentStatus, SectionWithTitle } from '@/features';
+import { CurrentStatus, HireMeForm, SectionWithTitle } from '@/features';
 
 export const Contact = () => (
   <>
@@ -9,6 +10,12 @@ export const Contact = () => (
     >
       <CurrentStatus status={COMMON_CONSTANTS.WORK_STATUS.AVAILABLE} />
     </SectionWithTitle>
-    <h2 className="text-red-600">TBD Soon!</h2>
+    <div className="w-full px-4 flex flex-col items-start justify-start gap-4">
+      <Title>Get In Touch</Title>
+      <Paragraph>
+        If you&apos;re interested in working together, feel free to reach out!
+      </Paragraph>
+      <HireMeForm />
+    </div>
   </>
 );

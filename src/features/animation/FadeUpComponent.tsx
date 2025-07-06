@@ -11,7 +11,7 @@ export const FadeUpComponent = ({
 
   useEffect(() => {
     setIsVisible(false);
-    const timeout = setTimeout(() => setIsVisible(true), 100);
+    const timeout = setTimeout(() => setIsVisible(true), 180);
     return () => clearTimeout(timeout);
   }, [location.pathname]);
 
