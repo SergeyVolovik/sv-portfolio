@@ -39,3 +39,8 @@ export interface AvatarProps {
   children?: React.ReactNode;
   className?: string;
 }
+
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  className?: string;
+}
