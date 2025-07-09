@@ -20,7 +20,7 @@ export const App = () => {
             <NavigationLinks />
             <div className="flex items-center gap-4 flex-wrap">
               <ThemeSwitchButton />
-              {!isContactPage && <HireButton />}
+              {!isContactPage ? <HireButton /> : null}
             </div>
           </Panel>
         </Navigation>
