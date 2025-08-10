@@ -3,7 +3,7 @@ import { Button } from '@/components';
 import { useCopyEmail } from '@/hooks';
 
 export const CopyEmailButton = () => {
-  const { buttonText, handleCopyEmail } = useCopyEmail();
+  const { buttonText, handleCopyEmail, copied } = useCopyEmail();
 
   return (
     <Button
@@ -11,7 +11,11 @@ export const CopyEmailButton = () => {
       onClick={handleCopyEmail}
     >
       <CopyEmailIcon />
-      <span className="w-full min-w-[85px] text-black">{buttonText}</span>
+      <span
+        className={`w-full min-w-[85px] text-black ${copied ? 'text-emerald-500' : ''}`}
+      >
+        {buttonText}
+      </span>
     </Button>
   );
 };

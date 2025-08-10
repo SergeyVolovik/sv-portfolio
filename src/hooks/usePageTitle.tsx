@@ -6,6 +6,7 @@ import { useLocation, useParams } from 'react-router-dom';
 export const usePageTitle = () => {
   const location = useLocation();
   const { id } = useParams();
+  const locationPath = location.pathname;
   const projectTitle = id
     ? `${PROJECTS.find(({ id: projectId }) => projectId === Number(id))?.title || 'Project'} ${id} - ${NAVIGATION_PAGE_TITLES['/']}` ||
       ''
@@ -14,11 +15,11 @@ export const usePageTitle = () => {
   useEffect(() => {
     document.title =
       projectTitle ||
-      NAVIGATION_PAGE_TITLES[location.pathname] ||
+      NAVIGATION_PAGE_TITLES[locationPath] ||
       NAVIGATION_PAGE_TITLES['/'];
   }, [location]);
 
   return {
-    isContactPage: location.pathname === NAVIGATION_PATHS.CONTACT
+    isContactPage: locationPath === NAVIGATION_PATHS.CONTACT
   };
 };

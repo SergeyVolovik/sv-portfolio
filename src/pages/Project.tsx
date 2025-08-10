@@ -10,9 +10,7 @@ export const Project = () => {
   const project = PROJECTS.find((p) => p.id === Number(id));
 
   useEffect(() => {
-    if (!project) {
-      navigate('/404', { replace: true });
-    }
+    if (!project) navigate('/404', { replace: true });
   }, [project, navigate]);
 
   if (!project) return null;
