@@ -1,3 +1,4 @@
+import { AVATAR_IMG_PATH } from '@/assets';
 import { Avatar, Paragraph, Title } from '@/components';
 import { COMMON_CONSTANTS } from '@/constants';
 import {
@@ -8,8 +9,11 @@ import {
   ProjectsSection,
   SectionWithTitle
 } from '@/features';
+import { Suspense } from 'react';
 
-const IMG_SRC = 'images/my-avatar.gif';
+const LOADING_PLACEHOLDER = (
+  <div className="w-full h-full max-w-[160px] max-h-[160px] bg-blackRgba10" />
+);
 
 export const Home = () => (
   <>
@@ -31,10 +35,12 @@ export const Home = () => (
           <CopyEmailButton />
         </ButtonGroup>
       </div>
-      <Avatar
-        className="order-1 md:order-2 w-full h-full p-2 max-w-[160px] max-h-[160px] bg-blackRgba10"
-        imgSrc={IMG_SRC}
-      />
+      <Suspense fallback={LOADING_PLACEHOLDER}>
+        <Avatar
+          className="order-1 md:order-2 w-full h-full p-2 max-w-[160px] max-h-[160px] bg-blackRgba10"
+          imgSrc={AVATAR_IMG_PATH}
+        />
+      </Suspense>
     </div>
     <ProjectsSection />
   </>

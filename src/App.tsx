@@ -3,6 +3,7 @@ import {
   FadeUpComponent,
   HireButton,
   NavigationLinks,
+  QRWithPopover,
   ThemeSwitchButton
 } from '@/features';
 import { usePageTitle, useScrollToTop } from '@/hooks';
@@ -19,6 +20,7 @@ export const App = () => {
           <Panel className="p-[14px] flex justify-between">
             <NavigationLinks />
             <div className="flex items-center gap-4 flex-wrap">
+              <QRWithPopover />
               <ThemeSwitchButton />
               {!isContactPage ? <HireButton /> : null}
             </div>

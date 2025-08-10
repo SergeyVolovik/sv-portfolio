@@ -69,7 +69,8 @@
     @apply stroke-black;
   }
   .default__navlink:hover .fill__icon__effect,
-  .theme__switcher:hover .fill__icon__effect {
+  .theme__switcher:hover .fill__icon__effect,
+  .qr__code:hover .fill__icon__effect {
     @apply fill-black;
   }
   .default__navlink:hover .stroke__icon__effect,

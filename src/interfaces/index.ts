@@ -4,7 +4,7 @@ export interface ReactComponent {
 }
 
 export interface TooltipProps extends ReactComponent {
-  text: string;
+  content: React.ReactNode | string;
 }
 
 export interface NavLinkButtonProps extends ReactComponent {

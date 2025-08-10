@@ -20,3 +20,5 @@ export {
   SectionWithTitle,
   WorkTogetherSection
 } from './layouts';
+
+export { QRWithPopover } from './ui';

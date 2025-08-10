@@ -1,0 +1,1 @@
+export { QRWithPopover } from './QRWithPopover';

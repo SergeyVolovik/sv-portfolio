@@ -11,4 +11,5 @@ export { LinkedInIcon } from './LinkedInIcon';
 export { PortfolioIcon } from './PortfolioIcon';
 export { ProfileIcon } from './ProfileIcon';
 export { ProjectArrowRightIcon } from './ProjectArrowRightIcon';
+export { QRMobileIcon } from './QRMobileIcon';
 export { TelegramIcon } from './TelegramIcon';

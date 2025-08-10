@@ -18,6 +18,7 @@ export const useCopyEmail = () => {
 
   return {
     buttonText,
-    handleCopyEmail
+    handleCopyEmail,
+    copied
   };
 };

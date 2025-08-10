@@ -1,5 +1,5 @@
 import { NAVIGATION_LINKS_CONFIG } from '@/configs';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export const useCircleNavLinkAnimation = () => {
@@ -9,42 +9,46 @@ export const useCircleNavLinkAnimation = () => {
   const linksRef = useRef<Record<string, HTMLAnchorElement | null>>({});
   const [hovered, setHovered] = useState<string | null>(null);
   const activeLinkClassName = 'active__navlink';
-  const activeLink = linksRef.current[location.pathname];
+  const locationPath = location.pathname;
+  const activeLink = linksRef.current[locationPath];
 
-  const moveCircleTo = (path: string) => {
-    const link = linksRef.current[path];
-    const circle = circleRef.current;
-    const container = containerRef.current;
+  const moveCircleTo = useCallback(
+    (path: string) => {
+      const link = linksRef.current[path];
+      const circle = circleRef.current;
+      const container = containerRef.current;
 
-    const isLinkIncluded = NAVIGATION_LINKS_CONFIG.some(
-      (link) => link.to === path
-    );
+      const isLinkIncluded = NAVIGATION_LINKS_CONFIG.some(
+        (link) => link.to === path
+      );
 
-    if (!link && !isLinkIncluded) {
-      circle?.style.setProperty('opacity', '0');
-      return;
-    } else {
-      circle?.style.setProperty('opacity', '1');
-    }
-
-    if (link && circle && container) {
-      const linkRect = link.getBoundingClientRect();
-      const containerRect = container.getBoundingClientRect();
-      const centerX = linkRect.left - containerRect.left + linkRect.width / 2;
-
-      if (activeLink !== link) {
-        activeLink?.classList.remove(activeLinkClassName);
+      if (!link && !isLinkIncluded) {
+        circle?.style.setProperty('opacity', '0');
+        return;
       } else {
-        activeLink?.classList.add(activeLinkClassName);
+        circle?.style.setProperty('opacity', '1');
       }
 
-      circle.style.left = `${centerX}px`;
-    }
-  };
+      if (link && circle && container) {
+        const linkRect = link.getBoundingClientRect();
+        const containerRect = container.getBoundingClientRect();
+        const centerX = linkRect.left - containerRect.left + linkRect.width / 2;
+
+        if (activeLink !== link) {
+          activeLink?.classList.remove(activeLinkClassName);
+        } else {
+          activeLink?.classList.add(activeLinkClassName);
+        }
+
+        circle.style.left = `${centerX}px`;
+      }
+    },
+    [activeLink, circleRef, containerRef, linksRef]
+  );
 
   useEffect(() => {
-    moveCircleTo(hovered || location.pathname);
-  }, [hovered, location.pathname]);
+    moveCircleTo(hovered || locationPath);
+  }, [hovered, locationPath, moveCircleTo]);
 
   return {
     containerRef,
