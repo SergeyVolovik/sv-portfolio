@@ -11,5 +11,10 @@ export const COMMON_CONSTANTS = {
     AVAILABLE: 'Available for work',
     UNAVAILABLE: 'On the project',
     ON_LEAVE: 'On leave'
+  },
+  BREAK_POINTS: {
+    MOBILE: 768,
+    TABLET: 1024,
+    DESKTOP: 1025
   }
 };

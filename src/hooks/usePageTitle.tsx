@@ -17,7 +17,7 @@ export const usePageTitle = () => {
       projectTitle ||
       NAVIGATION_PAGE_TITLES[locationPath] ||
       NAVIGATION_PAGE_TITLES['/'];
-  }, [location]);
+  }, [location, projectTitle, locationPath]);
 
   return {
     isContactPage: locationPath === NAVIGATION_PATHS.CONTACT

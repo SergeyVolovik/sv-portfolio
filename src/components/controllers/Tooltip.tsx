@@ -1,7 +1,11 @@
 import { useDeviceType } from '@/hooks';
 import { TooltipProps } from '@/interfaces';
 
-export const Tooltip = ({ children, content, className }: TooltipProps) => {
+export const Tooltip = ({
+  children,
+  content,
+  className = ''
+}: TooltipProps) => {
   const { isMobile } = useDeviceType();
 
   if (isMobile) return <>{children}</>;

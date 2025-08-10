@@ -9,7 +9,8 @@ export const useCircleNavLinkAnimation = () => {
   const linksRef = useRef<Record<string, HTMLAnchorElement | null>>({});
   const [hovered, setHovered] = useState<string | null>(null);
   const activeLinkClassName = 'active__navlink';
-  const activeLink = linksRef.current[location.pathname];
+  const locationPath = location.pathname;
+  const activeLink = linksRef.current[locationPath];
 
   const moveCircleTo = (path: string) => {
     const link = linksRef.current[path];
@@ -43,8 +44,8 @@ export const useCircleNavLinkAnimation = () => {
   };
 
   useEffect(() => {
-    moveCircleTo(hovered || location.pathname);
-  }, [hovered, location.pathname]);
+    moveCircleTo(hovered || locationPath);
+  }, [hovered, locationPath, moveCircleTo]);
 
   return {
     containerRef,
