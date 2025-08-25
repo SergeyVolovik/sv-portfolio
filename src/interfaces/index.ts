@@ -1,6 +1,6 @@
 export interface ReactComponent {
   children: React.ReactNode;
-  className?: string;
+  className?: string | object;
 }
 
 export interface TooltipProps extends ReactComponent {
@@ -11,7 +11,8 @@ export interface NavLinkButtonProps extends ReactComponent {
   linkTo: string;
 }
 export interface ButtonProps extends ReactComponent {
-  onClick: () => void;
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
 export interface IconWrapperProps extends ReactComponent {}

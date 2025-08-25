@@ -23,6 +23,8 @@
   body {
     font-size: 18px;
     animation: all 0.1s linear;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   .dark {

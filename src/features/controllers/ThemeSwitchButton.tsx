@@ -1,9 +1,9 @@
 import { Tooltip } from '@/components';
-import { useDarkMode } from '@/hooks';
+import { useDarkModeContext } from '@/contexts';
 import { formatFirstLetterToUpperCase } from '@/utils';
 
 export const ThemeSwitchButton = () => {
-  const { iconByMode, toggleDarkMode, modeText } = useDarkMode();
+  const { iconByMode, toggleDarkMode, modeText } = useDarkModeContext();
   const toolTipText = `${formatFirstLetterToUpperCase(modeText)} Mode`;
 
   return (
