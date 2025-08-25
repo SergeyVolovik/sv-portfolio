@@ -1,7 +1,7 @@
 import { IconWrapperProps } from '@/interfaces';
 
 export const IconWrapper = ({ className = '', children }: IconWrapperProps) => (
-  <div className={`w-fit flex gap-2 flex-wrap md:gap-4 ${className}`}>
+  <div className={`w-fit flex flex-wrap gap-1 xs:gap-2 md:gap-4  ${className}`}>
     {children}
   </div>
 );

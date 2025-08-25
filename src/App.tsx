@@ -1,4 +1,5 @@
 import { Footer, Header, Navigation, Panel, Wrapper } from '@/components';
+import { DarkModeProvider } from '@/contexts';
 import {
   FadeUpComponent,
   HireButton,
@@ -14,7 +15,7 @@ export const App = () => {
   useScrollToTop();
 
   return (
-    <>
+    <DarkModeProvider>
       <Header>
         <Navigation>
           <Panel className="p-[14px] flex justify-between">
@@ -35,6 +36,6 @@ export const App = () => {
           </Panel>
         </Wrapper>
       </FadeUpComponent>
-    </>
+    </DarkModeProvider>
   );
 };

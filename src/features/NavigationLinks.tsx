@@ -13,7 +13,7 @@ export const NavigationLinks = () => {
   return (
     <div
       ref={containerRef}
-      className="flex items-center justify-between gap-4 relative"
+      className="gap-1 xs:gap-2 sm:gap-4 flex items-center justify-between relative"
     >
       <div
         ref={circleRef}
