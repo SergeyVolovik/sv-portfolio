@@ -37,7 +37,7 @@ export const Home = () => (
       </div>
       <Suspense fallback={LOADING_PLACEHOLDER}>
         <Avatar
-          className="order-1 md:order-2 w-full h-full p-2 max-w-[160px] max-h-[160px] bg-blackRgba10"
+          className="order-1 md:order-2 w-full h-full p-2 max-w-[180px] max-h-[180px] bg-blackRgba10"
           imgSrc={AVATAR_IMG_PATH}
         />
       </Suspense>
