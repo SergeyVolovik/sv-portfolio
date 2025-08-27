@@ -31,6 +31,7 @@ export const useForm = () => {
             `Thank you, ${formFields?.user_name.value}, for reaching out! I'll get back to you soon.`
           );
           setIsSubmitting(false);
+          formFields?.reset();
         },
         (error) => {
           console.error(error.text);

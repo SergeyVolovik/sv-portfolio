@@ -15,11 +15,18 @@ export const HireMeForm = () => {
         onSubmit={handleSubmit}
       >
         <div className="flex flex-col sm:flex-row gap-3">
-          <Input name="user_name" placeholder="Name" type="text" required />
+          <Input
+            name="user_name"
+            placeholder="Name"
+            type="text"
+            disabled={isSubmitting}
+            required
+          />
           <Input
             name="user_email"
             placeholder="Email Address"
             type="email"
+            disabled={isSubmitting}
             required
           />
         </div>
@@ -28,6 +35,7 @@ export const HireMeForm = () => {
           className="textarea textarea-block bg-blackRgba7 border border-blackRgba10 text-darkGray text-sm rounded-md !ring-0 hover:border-darkGray focus:border-darkGray resize-none"
           rows={5}
           placeholder="Message"
+          disabled={isSubmitting}
         />
         <div
           className={`w-full flex ${isSubmitting ? 'hover:cursor-not-allowed' : ''}`}
@@ -40,7 +48,7 @@ export const HireMeForm = () => {
 
       <ToastContainer
         position="top-right"
-        autoClose={3000}
+        autoClose={5000}
         hideProgressBar
         newestOnTop
         closeOnClick
