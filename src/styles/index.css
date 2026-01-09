@@ -98,10 +98,10 @@
 
   .fade-up {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-25px);
     transition:
-      opacity 0.15s cubic-bezier(0.65, 0, 0.35, 1),
-      transform 0.15s cubic-bezier(0.65, 0, 0.35, 1);
+      opacity 0.07s cubic-bezier(0.65, 0, 0.35, 1),
+      transform 0.07s cubic-bezier(0.65, 0, 0.35, 1);
     will-change: opacity, transform;
   }
 
