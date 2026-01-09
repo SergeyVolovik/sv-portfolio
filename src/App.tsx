@@ -1,4 +1,11 @@
-import { Footer, Header, Navigation, Panel, Wrapper } from '@/components';
+import {
+  Footer,
+  Header,
+  Navigation,
+  Panel,
+  ToastWrapper,
+  Wrapper
+} from '@/components';
 import { DarkModeProvider } from '@/contexts';
 import {
   FadeUpComponent,
@@ -16,6 +23,7 @@ export const App = () => {
 
   return (
     <DarkModeProvider>
+      <ToastWrapper />
       <Header>
         <Navigation>
           <Panel className="p-[14px] flex justify-between">
