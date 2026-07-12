@@ -5,6 +5,7 @@ export const useScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'auto' });
+    if (window.scrollY === 0) return;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [pathname]);
 };
