@@ -28,7 +28,7 @@ export const QRWithPopover = () => {
       <label className="popover-trigger flex m-0 p-0 cursor-help qr__code">
         <QRMobileIcon />
       </label>
-      <div className="popover-content theme__qr-popper max-w-[220px] mt-2 ">
+      <div className="popover-content theme__qr-popper max-w-[220px] mt-2">
         <QRPopoverContent imageSrc={imageSrc} />
       </div>
     </div>
