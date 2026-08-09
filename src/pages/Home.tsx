@@ -18,7 +18,7 @@ const LOADING_PLACEHOLDER = (
 export const Home = () => (
   <>
     <SectionWithTitle
-      className="py-4 flex-row items-center bg-white justify-between text-darkGray"
+      className="theme__section py-4 flex-row items-center justify-between text-darkGray"
       sectionTitle="Software Engineer"
     >
       <CurrentStatus status={COMMON_CONSTANTS.WORK_STATUS.AVAILABLE} />
@@ -27,7 +27,13 @@ export const Home = () => (
       <div className="order-2 md:order-1 w-full h-full flex flex-col items-center gap-2 text-center md:items-start md:text-left">
         <Title>I&apos;m Serhii Volovyk</Title>
         <Paragraph className="flex flex-col gap-[0.5px] mb-3">
-          <span>Software Engineer from Ukraine</span>
+          <span className="flex items-center gap-1">
+            Software Engineer from Ukraine{' '}
+            <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 3 2">
+              <rect width="3" height="2" fill="#0057B7" />
+              <rect y="1" width="3" height="1" fill="#FFD700" />
+            </svg>
+          </span>
           <span>Currently developer at Grid Dynamics</span>
         </Paragraph>
         <ButtonGroup>
@@ -37,7 +43,7 @@ export const Home = () => (
       </div>
       <Suspense fallback={LOADING_PLACEHOLDER}>
         <Avatar
-          className="order-1 md:order-2 w-full h-full p-2 max-w-[180px] max-h-[180px] bg-blackRgba10"
+          className="theme__avatar order-1 md:order-2 w-full h-full p-2 max-w-[180px] max-h-[180px]"
           imgSrc={AVATAR_IMG_PATH}
         />
       </Suspense>

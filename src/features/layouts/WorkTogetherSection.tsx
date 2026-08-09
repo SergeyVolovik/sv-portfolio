@@ -7,9 +7,9 @@ import {
 } from '@/features';
 
 export const WorkTogetherSection = () => (
-  <SectionWithTitle className="mt-6 mb-10 flex-col bg-white justify-center items-center gap-5 text-center">
+  <SectionWithTitle className="theme__section mt-6 mb-10 flex-col justify-center items-center gap-5 text-center">
     <Title>Let’s work together</Title>
-    <Paragraph>
+    <Paragraph className="mb-2">
       Creating user experience and visual appealing applications
     </Paragraph>
     <ButtonGroup>

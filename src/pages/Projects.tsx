@@ -5,7 +5,7 @@ export const Projects = () => (
   <>
     <SectionWithTitle
       sectionTitle="Projects"
-      className="mt-[18px] mb-4 flex-col bg-white justify-start items-start gap-5 text-justify"
+      className="theme__section mt-[18px] mb-4 flex-col justify-start items-start gap-5 text-justify"
     >
       <Title>My Best Work</Title>
       <Paragraph>

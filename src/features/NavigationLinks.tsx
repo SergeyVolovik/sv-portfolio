@@ -13,12 +13,9 @@ export const NavigationLinks = () => {
   return (
     <div
       ref={containerRef}
-      className="gap-1 xs:gap-2 sm:gap-4 flex items-center justify-between relative"
+      className="gap-2 xs:gap-[0.8rem] sm:gap-4 flex items-center justify-between relative"
     >
-      <div
-        ref={circleRef}
-        className="link__circle w-[35px] h-[35px] bg-blackRgba7 absolute -translate-x-1/2 translate-y-[-0.5px] rounded-full transition__effect pointer-events-none"
-      />
+      <div ref={circleRef} className="link__circle" />
 
       {NAVIGATION_LINKS_CONFIG.map(({ title, icon, to }) => (
         <Tooltip content={title} key={title}>
