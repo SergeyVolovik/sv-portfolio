@@ -13,6 +13,88 @@
     --blackRgba10: rgba(22, 22, 22, 0.1);
     --blackRgba20: rgba(22, 22, 22, 0.2);
     --blackRgba50: rgba(22, 22, 22, 0.5);
+
+    --body-bg: var(--gray);
+    --surface-1: var(--white);
+    --surface-2: var(--gray);
+    --surface-3: rgb(244, 244, 244);
+    --text-primary: var(--black);
+    --text-secondary: var(--dark-gray);
+    --border-color: var(--blackRgba10);
+    --button-bg: var(--white);
+    --button-text-color: var(--black);
+    --button-border-color: var(--blackRgba10);
+    --panel-bg: var(--white);
+    --panel-border-color: var(--blackRgba10);
+    --highlighted-section-bg: var(--gray);
+    --section-bg: var(--white);
+    --popper-bg: var(--white);
+    --popper-box-shadow: 0px 0px 0px 2px var(--blackRgba7);
+    --popper-text-color: var(--dark-gray);
+    --avatar-border-color: var(--blackRgba10);
+    --nav-link-bg: var(--white);
+    --nav-link-border-color: var(--blackRgba10);
+    --submit-button-bg: rgb(33, 33, 33);
+    --submit-button-text-color: var(--white);
+    --submit-button-border-color: var(--blackRgba10);
+    --icon-color: var(--dark-gray);
+    --icon-color-strong: var(--black);
+  }
+
+  .dark {
+    --body-bg: var(--black);
+    --surface-1: rgb(33, 33, 33);
+    --surface-2: rgb(44, 44, 44);
+    --surface-3: rgb(55, 55, 55);
+    --text-primary: var(--white);
+    --text-secondary: var(--light-gray);
+    --border-color: #2c2c2c;
+    --button-bg: rgb(33, 33, 33);
+    --button-text-color: var(--white);
+    --button-border-color: #2c2c2c;
+    --panel-bg: rgb(33, 33, 33);
+    --panel-border-color: #2c2c2c;
+    --highlighted-section-bg: rgb(44, 44, 44);
+    --section-bg: rgb(33, 33, 33);
+    --popper-bg: var(--black);
+    --popper-box-shadow: 0px 0px 0px 1px #2c2c2c;
+    --popper-text-color: var(--dark-gray);
+    --avatar-border-color: var(--dark-gray);
+    --nav-link-bg: rgb(55, 55, 55);
+    --nav-link-border-color: rgb(66, 66, 66);
+    --submit-button-bg: rgb(55, 55, 55);
+    --submit-button-text-color: var(--white);
+    --submit-button-border-color: var(--blackRgba10);
+    --icon-color: #d8d8d8;
+    --icon-color-strong: var(--white);
+  }
+
+  .light {
+    --body-bg: var(--gray);
+    --surface-1: var(--white);
+    --surface-2: var(--gray);
+    --surface-3: rgb(244, 244, 244);
+    --text-primary: var(--black);
+    --text-secondary: var(--dark-gray);
+    --border-color: var(--blackRgba10);
+    --button-bg: var(--white);
+    --button-text-color: var(--black);
+    --button-border-color: var(--blackRgba10);
+    --panel-bg: var(--white);
+    --panel-border-color: var(--blackRgba10);
+    --highlighted-section-bg: var(--gray);
+    --section-bg: var(--white);
+    --popper-bg: var(--white);
+    --popper-box-shadow: 0px 0px 0px 2px var(--blackRgba7);
+    --popper-text-color: var(--dark-gray);
+    --avatar-border-color: var(--blackRgba10);
+    --nav-link-bg: var(--white);
+    --nav-link-border-color: var(--blackRgba10);
+    --submit-button-bg: rgb(33, 33, 33);
+    --submit-button-text-color: var(--white);
+    --submit-button-border-color: var(--blackRgba10);
+    --icon-color: var(--dark-gray);
+    --icon-color-strong: var(--black);
   }
 
   * {
@@ -28,28 +110,85 @@
     overflow-x: hidden;
   }
 
-  .dark {
-    background: var(--black);
-  }
-
-  .light {
-    background: var(--gray);
+  body {
+    background: var(--body-bg);
   }
 
   .root {
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
   }
 
-  .fill__gray {
-    @apply fill-[var(--gray)];
+  .theme__panel {
+    background: var(--panel-bg);
+    border: 0.1px solid var(--panel-border-color) !important;
+    box-shadow:
+      rgba(10, 10, 10, 0.06) 0px 1.2px 1.2px 0px,
+      rgba(10, 10, 10, 0.04) 0px 5px 10px 0px !important;
+  }
+
+  .theme__highlighted-section {
+    background: var(--highlighted-section-bg);
+  }
+
+  .theme__section {
+    background: var(--section-bg);
+  }
+
+  .theme__qr-popper {
+    background-color: var(--popper-bg) !important;
+    box-shadow: var(--popper-box-shadow) !important;
+  }
+
+  .theme__qr-popper-content {
+    background-color: var(--popper-bg);
+    color: var(--popper-text-color);
+  }
+
+  .theme__button {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text-color) !important;
+    border-color: var(--button-border-color) !important;
+  }
+
+  .theme__avatar {
+    background-color: var(--avatar-border-color) !important;
+  }
+
+  .theme__nav-link {
+    background-color: var(--nav-link-bg) !important;
+    border: 0.5px solid var(--nav-link-border-color) !important;
+  }
+
+  .theme__nav-link-text {
+    color: var(--button-text-color) !important;
+  }
+
+  .theme__input-field {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text-color) !important;
+    border-color: var(--button-border-color) !important;
+    @apply hover__effect transition__effect;
+  }
+
+  .theme__submit-button {
+    background-color: var(--submit-button-bg) !important;
+    color: var(--submit-button-text-color) !important;
+    border-color: var(--submit-button-border-color) !important;
+  }
+
+  .theme__social-icon {
+    background-color: var(--button-bg) !important;
+    color: var(--button-text-color) !important;
+    border-color: var(--button-border-color) !important;
   }
 
   .transition__effect {
     @apply transition-all duration-300 ease-linear;
   }
   .hover__effect {
-    @apply hover:shadow-[0px_0px_0px_4px_rgba(22,22,22,0.1)];
+    @apply hover:shadow-[0px_0px_0px_4px_rgba(22,22,22,0.1)] dark:hover:shadow-[0px_0px_0px_4px_rgba(55,55,55,0.8)];
   }
   .active__effect {
     @apply active:opacity-75 active:shadow-none;
@@ -65,20 +204,24 @@
     @apply p-[5px] flex items-center gap-1 relative;
   }
 
+  .link__circle {
+    @apply bg-blackRgba7 dark:bg-[rgba(66,66,66,0.8)] w-[35px] h-[35px] absolute -translate-x-1/2 translate-y-[-0.5px] rounded-full transition__effect pointer-events-none;
+  }
+
   .active__navlink .fill__icon__effect {
-    @apply fill-black;
+    @apply fill-black dark:fill-white;
   }
   .active__navlink .stroke__icon__effect {
-    @apply stroke-black;
+    @apply stroke-black dark:stroke-white;
   }
   .default__navlink:hover .fill__icon__effect,
   .theme__switcher:hover .fill__icon__effect,
   .qr__code:hover .fill__icon__effect {
-    @apply fill-black;
+    @apply fill-black dark:fill-white;
   }
   .default__navlink:hover .stroke__icon__effect,
   .theme__switcher:hover .stroke__icon__effect {
-    @apply stroke-black;
+    @apply stroke-black dark:stroke-white;
   }
 
   @keyframes shine {

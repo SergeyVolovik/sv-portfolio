@@ -1,7 +1,7 @@
 export const TelegramIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="#616161"
+    className="fill-[#616161] dark:fill-white"
     width="24px"
     height="24px"
     viewBox="0 0 32 32"

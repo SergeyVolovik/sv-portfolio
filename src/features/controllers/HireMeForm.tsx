@@ -12,6 +12,7 @@ export const HireMeForm = () => {
     >
       <div className="flex flex-col sm:flex-row gap-3">
         <Input
+          className="theme__input-field"
           name="user_name"
           placeholder="Name"
           type="text"
@@ -19,6 +20,7 @@ export const HireMeForm = () => {
           required
         />
         <Input
+          className="theme__input-field"
           name="user_email"
           placeholder="Email Address"
           type="email"
@@ -28,7 +30,7 @@ export const HireMeForm = () => {
       </div>
       <textarea
         name="user_message"
-        className="textarea textarea-block bg-blackRgba7 border border-blackRgba10 text-darkGray text-sm rounded-md !ring-0 hover:border-darkGray focus:border-darkGray resize-none"
+        className="theme__input-field textarea textarea-block bg-blackRgba7 border border-blackRgba10 text-darkGray text-sm rounded-md !ring-0 hover:border-darkGray focus:border-darkGray resize-none"
         rows={5}
         placeholder="Message"
         disabled={isSubmitting}
@@ -36,7 +38,10 @@ export const HireMeForm = () => {
       <div
         className={`w-full flex ${isSubmitting ? 'hover:cursor-not-allowed' : ''}`}
       >
-        <Button className="w-full !py-3" disabled={isSubmitting}>
+        <Button
+          className="w-full !py-3 theme__submit-button"
+          disabled={isSubmitting}
+        >
           {isSubmitting ? 'Submitting...' : 'Submit'}
         </Button>
       </div>

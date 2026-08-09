@@ -30,7 +30,7 @@ export const Project = () => {
         <h1 className="text-xl text-red-500">Project ID: {id}</h1>
         <div>
           {TECH_STACK_BADGES.map((badge) => (
-            <span key={badge} className="mr-2 badge">
+            <span key={badge} className="mr-2 badge dark:bg-darkGray">
               {badge}
             </span>
           ))}

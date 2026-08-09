@@ -4,7 +4,7 @@ export const LightIcon = () => (
     width="24px"
     height="24px"
     viewBox="0 0 24 24"
-    className="stroke__icon__effect"
+    className="stroke__icon__effect z-10"
     fill="none"
   >
     <path

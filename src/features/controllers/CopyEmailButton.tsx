@@ -6,13 +6,10 @@ export const CopyEmailButton = () => {
   const { buttonText, handleCopyEmail, copied } = useCopyEmail();
 
   return (
-    <Button
-      className="bg-white border border-blackRgba10"
-      onClick={handleCopyEmail}
-    >
+    <Button className="border" onClick={handleCopyEmail}>
       <CopyEmailIcon />
       <span
-        className={`w-full min-w-[85px] text-black ${copied ? 'text-emerald-500' : ''}`}
+        className={`w-full min-w-[85px] ${copied ? 'text-emerald-500' : ''}`}
       >
         {buttonText}
       </span>

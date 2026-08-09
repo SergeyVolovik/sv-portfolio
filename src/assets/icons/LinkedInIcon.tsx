@@ -4,7 +4,7 @@ export const LinkedInIcon = () => (
     width="24px"
     height="24px"
     viewBox="0 0 24 24"
-    fill="#616161"
+    className="fill-[#616161] dark:fill-white"
   >
     <g>
       <path fill="none" d="M0 0h24v24H0z" />
