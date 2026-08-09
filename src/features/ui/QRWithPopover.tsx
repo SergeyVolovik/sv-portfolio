@@ -3,14 +3,15 @@ import {
   QR_CODE_LIGHT_IMG_PATH,
   QRMobileIcon
 } from '@/assets';
+import { Paragraph } from '@/components';
 import { useDarkModeContext } from '@/contexts/DarkModeContext';
 import { useDeviceType } from '@/hooks';
 
 const QRPopoverContent = ({ imageSrc }: { imageSrc: string }) => (
   <div className="theme__qr-popper-content flex flex-col text-sm">
-    <span className="mb-2 px-1">
+    <Paragraph className="mb-2 px-1">
       Please scan the QR code to view the mobile version:
-    </span>
+    </Paragraph>
     <img src={imageSrc} alt="QR code mobile version " />
   </div>
 );
